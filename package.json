@@ -1,0 +1,22 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Film API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nurrashed/FilmAPI.git"
+  },
+  "author": "Nur Mohammad Rashed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nurrashed/FilmAPI/issues"
+  },
+  "homepage": "https://github.com/nurrashed/FilmAPI#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
