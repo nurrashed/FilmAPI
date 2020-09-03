@@ -11,6 +11,9 @@ app.use(bodyParser.json());
 
 const port = process.env.PORT || 3000;
 
+const actorRouter = require('./Routers/actorRouter')();
+app.use('/api', actorRouter);
+
 app.server = app.listen(port, ()=>{
     console.log(`Running on port ${port}`);
 });
