@@ -6,13 +6,14 @@ actorsController = () => {
             const records = await db.get(req, res, 'actor');
             if (res.statusCode == 404)
                 return res.send('Could not find the resource');
-
             return res.json(records);
         }
         catch (err) {
             return res.status(404);
         }
     };
+
+    return { get }
 }
 
 module.exports = actorsController;

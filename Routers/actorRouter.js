@@ -6,13 +6,13 @@ function routes(){
     const controller = actorsController();
 
     actorRouter.route('/actors')
-        .get(controller.get)
-        .post(controller.post);
+        .get(controller.get);
+        //.post(controller.post);
 
     actorRouter.route('/actors/:Id')
-        .get(controller.get)
-        .put(controller.put)
-        .delete(controller.remove);
+        .get(controller.get);
+        //.put(controller.put)
+        //.delete(controller.remove);
 
         return actorRouter;
 }
