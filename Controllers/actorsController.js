@@ -13,7 +13,42 @@ actorsController = () => {
         }
     };
 
-    return { get }
+    post = async (req, res) => {
+        try {
+            return await db.modify(req, res, 'AddActor', 'FirstName', 'LastName', 'Gender');
+        }
+        catch (err) {
+            res.status(500);
+            return res.send('Unable to create.');
+        }
+    };
+
+
+    put = async (req, res) => {
+        try {
+            return await db.modify(req, res, 'UpdateActor', 'FirstName', 'LastName', 'Gender');
+        }
+        catch (err) {
+            res.status(500);
+            return res.send('Unable to update.');
+        }
+    };
+
+    remove = async (req, res) => {
+        try {
+            await db.modify(req, res, 'DeleteActor');
+        }
+        catch (err) {
+            console.log(err);
+            res.status(500);
+            return res.send('Unable to Delete.');
+        }
+    };
+
+
+    return { get, post, put, remove };
 }
+
+
 
 module.exports = actorsController;
