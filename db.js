@@ -8,7 +8,7 @@ createHateoasLinks = (req, records, hateoas) =>
         record.links = {};
 
         hateoas.forEach(link => 
-            record.links[link.property.toLowerCase() == 'actorid' ? 'self' : link.property.toLowerCase()] = 
+            record.links[link.property.toLowerCase() == 'id' ? 'self' : link.property.toLowerCase()] = 
             `http://${req.headers.host}/api/${link.endpoint}/${record[link.property]}`);
         
         return record;
