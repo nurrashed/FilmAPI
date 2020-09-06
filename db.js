@@ -36,7 +36,7 @@ get = async (req, res, endpoint, hateoas = [], ...params) => {
                 res.status(404);
                 return result;
             }
-                        
+            // ActorId   delete kore only ID hobe for other controller            
             hateoas.push({ property: 'ActorId', endpoint: `${endpoint}s` });
 
             const records = createHateoasLinks(req, result, hateoas);
